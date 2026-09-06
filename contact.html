@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact & Pre-Order - North Star Bakery</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="bakery-logo.png" alt="North Star Bakery clean geometric star logo symbol">
+        <h1>Inquiry and Pre-Order Request Form</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact & Pre-Order</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Get in Touch with Us</h2>
+            <p>Have questions about an upcoming event layout or want to reserve a specific batch of fresh pastries? Listen to our welcoming greeting audio below for this week's pickup details, or fill out the pre-order inquiry form underneath.</p>
+            
+            <audio controls>
+                <source src="bakery-welcome.mp3" type="audio/mpeg">
+                <source src="bakery-behind-scenes.mp4" type="video/mp4">
+                <p>Your browser does not support our media components. Our audio message welcomes you to North Star Bakery and outlines our daily pickup instructions from 6:00 AM to 6:00 PM.</p>
+            </audio>
+        </section>
+
+        <section>
+            <h2>Pre-Order Form</h2>
+            <form action="#" method="POST">
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    <label for="client-name">Full Name:</label>
+                    <input type="text" id="client-name" name="client-name" required placeholder="Enter your full name">
+
+                    <label for="client-email">Email Address:</label>
+                    <input type="email" id="client-email" name="client-email" required placeholder="name@example.com">
+                </fieldset>
+
+                <fieldset>
+                    <legend>Order Details</legend>
+                    <label for="pickup-date">Preferred Pickup Date:</label>
+                    <input type="date" id="pickup-date" name="pickup-date" required>
+
+                    <label for="order-items">Items Requirement Descriptions:</label>
+                    <textarea id="order-items" name="order-items" required placeholder="Describe the breads, pastries, or cakes you wish to reserve"></textarea>
+
+                    <label for="allergy-notes">Allergy Notes (Optional):</label>
+                    <textarea id="allergy-notes" name="allergy-notes" placeholder="List any specific allergy or food concerns we should avoid"></textarea>
+                </fieldset>
+
+                <button type="submit">Submit Pre-Order Request</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 North Star Bakery. Handcrafted with care for our local community.</p>
+    </footer>
+</body>
+</html>
