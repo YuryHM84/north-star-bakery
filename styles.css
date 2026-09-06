@@ -1,0 +1,249 @@
+/* ==========================================
+   1. DESIGN VARIABLES (Colors & Fonts)
+   ========================================== */
+:root {
+    /* Clean palette using 3 main tones for an artisan bakery theme */
+    --color-primary: #4A2E1B;    /* Deep brown for headings and main text contrast */
+    --color-secondary: #D4A373;  /* Warm golden wheat for navigation buttons and accents */
+    --color-bg: #FAEDCD;         /* Soft cream for an eye-pleasing general background */
+    --color-text: #2B1E15;       /* Dark charcoal brown for maximum readability */
+    --color-white: #FFFFFF;      /* Crisp white for clean sections and card shapes */
+    --color-border: #E6CCB2;     /* Subtle border to separate input areas softly */
+    
+    /* Maximum of 2 distinct font families */
+    --font-heading: 'Georgia', serif;
+    --font-body: 'Arial', sans-serif;
+}
+
+/* ==========================================
+   2. BASE STYLES (Mobile-First Strategy)
+   ========================================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.6;
+    padding: 15px;
+}
+
+/* Clear hierarchy and readable header styling */
+h1, h2, h3 {
+    font-family: var(--font-heading);
+    color: var(--color-primary);
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.4rem;
+    margin-top: 10px;
+    border-bottom: 2px solid var(--color-secondary);
+    padding-bottom: 5px;
+}
+
+p {
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+/* Responsive media components and graphics alignment */
+img, audio, video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 15px auto;
+    border-radius: 8px;
+}
+
+figure {
+    background-color: var(--color-white);
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+figcaption {
+    font-size: 0.9rem;
+    font-style: italic;
+    text-align: center;
+    color: var(--color-primary);
+    margin-top: 8px;
+}
+
+ul {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+/* ==========================================
+   3. STRUCTURE AND FLEXBOX (Mobile Layout)
+   ========================================== */
+header {
+    background-color: var(--color-white);
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    text-align: center;
+}
+
+header img {
+    max-width: 120px;
+}
+
+/* Required Flexbox structure for navigation link items */
+nav ul {
+    display: flex;
+    flex-direction: column; /* Clean stacked list column structure for smaller screens */
+    list-style: none;
+    margin-left: 0;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+nav a {
+    display: block;
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 12px;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+section {
+    background-color: var(--color-white);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+/* Form block style setup for pre-order requests */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+fieldset {
+    border: 1px solid var(--color-border);
+    padding: 15px;
+    border-radius: 6px;
+    background-color: #FFFDF9;
+}
+
+legend {
+    font-family: var(--font-heading);
+    font-weight: bold;
+    color: var(--color-primary);
+    padding: 0 10px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--color-secondary);
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+button[type="submit"] {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border: none;
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+button[type="submit"]:hover {
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: var(--color-primary);
+    border-top: 1px solid var(--color-secondary);
+}
+
+/* ==========================================
+   4. RESPONSIVE DESIGN MEDIA QUERY (Desktop)
+   ========================================== */
+@media (min-width: 768px) {
+    body {
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 30px;
+    }
+
+    h1 {
+        font-size: 2.4rem;
+    }
+
+    /* Shift from vertical menu to horizontal flexbox row display for widescreen */
+    nav ul {
+        flex-direction: row;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    nav a {
+        padding: 10px 25px;
+    }
+
+    main {
+        gap: 30px;
+    }
+}
