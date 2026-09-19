@@ -70,7 +70,7 @@ function setupFormValidation() {
             document.getElementById("name-error").textContent = "Error: Name must be at least 3 characters long.";
             isValid = false;
         }
-        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$;
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailPattern.test(emailInput)) {
             document.getElementById("email-error").textContent = "Error: Please enter a valid email address.";
             isValid = false;
